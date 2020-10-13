@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <ImageButton
+            android:id="@+id/back2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_baseline_arrow_back_24">
+
+        </ImageButton>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_car"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/alconia"
+            ></TextView>
+    </androidx.appcompat.widget.Toolbar>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab"
+            android:layout_below="@id/tool"
+            android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout android:layout_height="wrap_content" android:layout_width="match_parent" app:tabIndicatorColor="@color/colorPrimary" android:layout_marginTop="10dp" app:tabIndicatorHeight="2dp" android:id="@+id/tablayout" app:tabMode="fixed" app:tabGravity="fill"  >
+
+            <com.google.android.material.tabs.TabItem android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/bestrateTabItem1"         android:fontFamily="@font/alconia"
+                android:text="Asia"
+                />
+            <com.google.android.material.tabs.TabItem android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/bestrateTabItem"         android:fontFamily="@font/alconia"
+                android:text="India"
+                />
+            <com.google.android.material.tabs.TabItem android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/favTabItem"         android:fontFamily="@font/alconia"
+                android:text="America"  />
+
+            <com.google.android.material.tabs.TabItem android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/disTabItem"         android:fontFamily="@font/alconia"
+                android:text="Europe"  />
+        </com.google.android.material.tabs.TabLayout>
+        </RelativeLayout>
+
+
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list"
+        android:fontFamily="@font/alconia"
+        android:layout_below="@+id/tab"
+        />
+    </RelativeLayout>
